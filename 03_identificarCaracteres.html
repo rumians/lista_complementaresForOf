@@ -7,16 +7,17 @@
 
     //Entrada
     const palavra = prompt("Diga uma palavra").toLowerCase();
-    let palavraseparada = palavra.split('')
-    let vogais = ["a","e","i","o","u"];
+    let vogais = ["a", "e", "i", "o", "u"];
     //Pocessamento
-    let contvogais = 0;
-    let contconsoantes = 0;
-    for (const pla of palavraseparada) {
-        if (palavraseparada.includes(vogais)) {
-
+    let contvogais = [];
+    let contconsoantes = [];
+    for (const pla of palavra.split('')) {
+        if (vogais.includes(pla)) {
+            contvogais.push(pla);
+        } else {
+            contconsoantes.push(pla);
         }
     }
     //Saída
-
+    alert(`Na palavra ${palavra} existem "${contvogais.length}" vogais e "${contconsoantes.length}" consoantes.`);
 </script>
