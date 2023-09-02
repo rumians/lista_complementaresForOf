@@ -8,11 +8,26 @@
     */
 
     //Entrada
-
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    let PR = [];
+    let SC = [];
+    let RS = [];
     //Processamento
-
-
+    for (const cidade of cidades) {
+        const pergunta = prompt(`A qual estado pertence essa cidade "${cidade}".(PR-parana, SC-santa catarina, RS-rio grande do sul)`).toUpperCase();
+        if (pergunta == "PR") {
+            PR.push(cidade)
+        } if (pergunta == "SC") {
+            SC.push(cidade)
+        } if (pergunta == "RS") {
+            RS.push(cidade)
+        }
+    }
+    const resposta = [
+        ["SANTA CATARINA",SC.join("- ")],
+        ["PARANÁ", PR.join("- ")],
+        ["RIO GRANDE DO SUL", RS.join("- ")]
+    ];
     //Saída
-
+    alert(`${resposta.sort((a, b) => b[1].length - a[1].length)}`);
 </script>

@@ -7,11 +7,14 @@
     */
 
     //Entrada
-
-
+    let multiplicado = Number(prompt("Qual numero voce deseja calcular a tabuada?"));
+    let multiplicador = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let resposta = [];
     //Processamento
-
-
+    for (const numero of multiplicador) {
+        const num = multiplicado * numero;
+        resposta.push(num)
+    }
     //Saída
-    
+    alert(`Voce escolheu o numero ${multiplicado}, sua tabuada é essa ${resposta.join(", ")}`);
 </script>

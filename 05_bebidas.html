@@ -7,11 +7,15 @@
     */
 
     //Entrada
-
-
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+    let bebidasnaoalcoolicas = [];
     //Processamento
-
-
+    for (const bebida of bebidas) {
+        const realoufake = prompt(`${bebida} possui alcool ou nao ? (S / N)`).toLowerCase();
+        if (realoufake == "n") {
+            bebidasnaoalcoolicas.push(bebida);
+        }
+    }
     //Saída
-
+    alert(`Essas sao as bebidas nao alcolicas "${bebidasnaoalcoolicas}".`)
 </script>

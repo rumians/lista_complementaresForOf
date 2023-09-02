@@ -8,11 +8,15 @@
     */
 
     //Entrada
-
-
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+    let coresecolidas = [];
     //Processamento
-
-
+    for (const cor of cores) {
+        let pergunta = prompt(`Voce gosta da cor ${cor}. (S-sim / N-nao).`).toLowerCase();
+        if(pergunta == "s"){
+            coresecolidas.push(cor);
+        }
+    }
     //Saída
-
+    alert(`A(s) sua(s) cor(res) favorita(s) é(sao) ${coresecolidas}. Sao no total ${coresecolidas.length}.`);
 </script>
